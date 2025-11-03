@@ -9,7 +9,7 @@ fn main() {
 
 	let file = File::open(input.trim());
 	match file {
-		Ok(_) => println!("success"),
+		Ok(_) => if input.trim() == "/" {println!("failure")} else {println!("success")},
 		Err(_) => println!("failure")
 	}
 }
